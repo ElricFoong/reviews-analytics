@@ -7,7 +7,8 @@ with open("reviews.txt", "r") as f:
         data.append(line)
         if count % 1000 == 0:
             print(len(data))
-sum_len = 0
+new = []
 for d in data:
-    sum_len += len(d)
-print("average comment of length are ", sum_len/len(data))
+    if len(d) < 80:
+        new.append(d)
+print("Comment less than 100 words are total ",len(new))
