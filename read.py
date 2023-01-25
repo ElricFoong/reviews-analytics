@@ -12,3 +12,10 @@ for d in data:
     if len(d) < 80:
         new.append(d)
 print("Comment less than 100 words are total ",len(new))
+
+good = []
+for g in data:
+    if " good " in g:
+        good.append(g)
+print(" Total ", len(good), " reviews are mentions good. " )
+print(good[0])
